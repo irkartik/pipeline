@@ -17,7 +17,7 @@ stages:
     - task: ArchiveFiles@2
       displayName: 'Archive FakeRestAPI'
       inputs:
-        rootFolderOrFile: 'path/to/fakerestapi'
+        rootFolderOrFile: 'automatedtesting/jmeter/fakerestapi'
         includeRootFolder: false
         archiveType: 'zip'
         archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId)-fakerestapi.zip'
@@ -56,12 +56,10 @@ stages:
   #             targetType: 'inline'
   #             script: |
   #               #! /bin/bash
-                
+
   #               sudo apt-get upgrade -y
   #               sudo apt-get install python3-pip -y
   #               sudo apt-get install unzip -y
   #               sudo apt-get install -y chromium-browser
   #               pip3 install selenium
   #               export PATH=$PATH:some/path
-
-
